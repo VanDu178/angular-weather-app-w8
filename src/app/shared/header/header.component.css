@@ -1,0 +1,35 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    background-color: #00a6ff;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .spacer {
+    flex: 1 1 auto;
+  }
+  
+  .nav-links a,
+  .nav-links button {
+    margin: 0 8px;
+    text-transform: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  .current-time {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 0.9rem;
+  }
+  
+  .current-time mat-icon {
+    margin-right: 4px;
+  }
+  

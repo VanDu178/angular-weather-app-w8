@@ -1,0 +1,30 @@
+.footer-container {
+  background-color: #f5f5f5;
+  padding: 16px 24px;
+  text-align: center;
+  margin-top: 24px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.social-links a {
+  margin: 0 8px;
+  color: #444;
+  text-decoration: none;
+}
+
+mat-icon {
+  font-size: 24px;
+  vertical-align: middle;
+  transition: color 0.3s ease;
+}
+
+mat-icon:hover {
+  color: #1976d2;
+}

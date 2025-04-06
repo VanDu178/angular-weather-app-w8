@@ -1,0 +1,16 @@
+<mat-toolbar color="primary" class="header-container">
+    <span class="logo">🌤️ Weather App</span>
+
+    <span class="spacer"></span>
+
+    <nav class="nav-links">
+        <a mat-button routerLink="/home">Trang chủ</a>
+        <a mat-button routerLink="/about">Về chúng tôi</a>
+        <a *ngIf="!isLoggedIn" mat-button routerLink="/login">Đăng nhập</a>
+        <button *ngIf="isLoggedIn" mat-button (click)="logout()">Đăng xuất</button>
+    </nav>
+
+    <span class="current-time">
+        <mat-icon>schedule</mat-icon> {{ currentTime }}
+    </span>
+</mat-toolbar>

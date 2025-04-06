@@ -1,0 +1,13 @@
+<section class="favorite-locations">
+    <h3>Các địa điểm yêu thích</h3>
+    <mat-list>
+        <mat-list-item *ngFor="let city of favoriteCities">
+            <div class="favorite-city-info">
+                <span>{{ city.name }} - {{ city.temp }}°C</span>
+                <button mat-icon-button (click)="onRemoveFromFavorites(city.name)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+        </mat-list-item>
+    </mat-list>
+</section>

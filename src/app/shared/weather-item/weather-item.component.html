@@ -1,0 +1,19 @@
+<mat-card class="city-card">
+    <mat-card-header>
+        <mat-card-title>{{ city?.name }}</mat-card-title>
+        <mat-card-subtitle>{{ city?.status }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <div class="weather-info">
+            <mat-icon>{{ city?.icon }}</mat-icon>
+            <span>{{ city?.temp }}°C</span>
+        </div>
+    </mat-card-content>
+
+    <mat-card-actions *ngIf="isLoggedIn">
+        <button mat-icon-button color="primary" (click)="onAddToFavorites()">
+            <mat-icon>favorite</mat-icon>
+        </button>
+    </mat-card-actions>
+</mat-card>

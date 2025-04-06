@@ -1,0 +1,149 @@
+.main-content {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.welcome {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.welcome h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.welcome p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+.city-list h3 {
+  font-size: 1.8rem;
+  color: #34495e;
+  margin-bottom: 1.5rem;
+}
+
+/* Skeleton Loading */
+.skeleton-loading {
+  padding: 1rem;
+}
+
+.skeleton-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skeleton-item {
+  background: #e0e0e0;
+  border-radius: 12px;
+  height: 200px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton-header {
+  width: 80%;
+  height: 20px;
+  background: #d0d0d0;
+  margin: 1rem;
+  border-radius: 4px;
+}
+
+.skeleton-content {
+  width: 50%;
+  height: 30px;
+  background: #d0d0d0;
+  margin: 1rem;
+  border-radius: 4px;
+}
+
+.skeleton-actions {
+  width: 30%;
+  height: 20px;
+  background: #d0d0d0;
+  margin: 1rem;
+  border-radius: 4px;
+  float: right;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Virtual Scrolling */
+.cities-grid {
+  height: 600px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Tùy chỉnh thanh scroll bar */
+.cities-grid::-webkit-scrollbar {
+  width: 8px; /* Chiều rộng thanh scroll */
+}
+
+.cities-grid::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Màu nền của track */
+  border-radius: 10px;
+}
+
+.cities-grid::-webkit-scrollbar-thumb {
+  background: #3498db; /* Màu của thumb (phần kéo) */
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.cities-grid::-webkit-scrollbar-thumb:hover {
+  background: #2980b9; /* Màu khi hover */
+}
+
+/* Nếu muốn ẩn hoàn toàn thanh scroll bar nhưng vẫn cho phép cuộn, uncomment đoạn sau */
+.cities-grid::-webkit-scrollbar {
+  display: none;
+}
+.cities-grid {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+
+@media (max-width: 1024px) {
+  .grid-wrapper,
+  .skeleton-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-wrapper,
+  .skeleton-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.favorite-section {
+  margin-top: 2rem;
+}

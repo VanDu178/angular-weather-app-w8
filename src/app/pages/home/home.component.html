@@ -1,0 +1,37 @@
+<main class="main-content">
+    <section class="welcome">
+        <h2>{{ title }}</h2>
+        <p>Theo dõi dự báo thời tiết chính xác và nhanh chóng.</p>
+
+        <section class="city-list">
+            <h3>Dự báo thời tiết các thành phố</h3>
+
+            <!-- Skeleton Loading -->
+            <div *ngIf="loading" class="skeleton-loading">
+                <div class="skeleton-grid">
+                    <div class="skeleton-item" *ngFor="let _ of [1, 2, 3]">
+                        <div class="skeleton-header"></div>
+                        <div class="skeleton-content"></div>
+                        <div class="skeleton-actions"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Virtual Scrolling with Grid -->
+            <cdk-virtual-scroll-viewport *ngIf="!loading" itemSize="200" class="cities-grid">
+                <div class="grid-wrapper">
+                    <app-weather-item *cdkVirtualFor="let city of cities; let i = index" [city]="city"
+                        [isLoggedIn]="isLoggedIn" (addToFavorites)="onAddToFavorites($event)"
+                        (removeFromFavorites)="onRemoveFromFavorites($event)">
+                    </app-weather-item>
+                </div>
+            </cdk-virtual-scroll-viewport>
+        </section>
+
+        <div *ngIf="isLoggedIn" class="favorite-section">
+            <app-favorite-locations [favoriteCities]="favoriteCities"
+                (removeFromFavorites)="onRemoveFromFavorites($event)">
+            </app-favorite-locations>
+        </div>
+    </section>
+</main>

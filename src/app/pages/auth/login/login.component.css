@@ -1,0 +1,24 @@
+/* Đặt chiều rộng tối đa cho card và căn giữa */
+.login-card {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* Căn chỉnh các form field để chúng đồng đều */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* Đặt kích thước của nút đăng nhập */
+button {
+  width: 100%;
+  padding: 12px;
+}
+
+/* Tùy chỉnh chiều cao và kích thước của card */
+mat-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
